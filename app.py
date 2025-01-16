@@ -6,17 +6,16 @@ import joblib
 from tensorflow.keras.models import load_model
 from PIL import Image
 
-from google.colab import drive
-drive.mount('/content/drive')
+
 
 # Initialize Flask app
 app = Flask(__name__)
 
 # Set model paths
-cnn_model_path = "/content/drive/MyDrive/Colab Notebooks/Kidney/CNN/cnn_model_final_complete.keras"
-resnet_model_path = "/content/drive/MyDrive/Colab Notebooks/Kidney/Resnet/ResnetFULLYOptimized.keras"
-rf_model_path = "/content/drive/MyDrive/Colab Notebooks/Kidney/Randomforst/random_forest_clinical_model.pkl"
-xgb_model_path = "/content/drive/MyDrive/Colab Notebooks/Kidney/XGBOOST/optimized_xgb_clinical_model.pkl"
+cnn_model_path = "https://drive.google.com/file/d/1uHsh4I97LMmHws6BoYphfw7U1hu1wakZ/view?usp=drive_link"
+resnet_model_path = "https://drive.google.com/file/d/1cQKJjJNCSxo0mrRzN136_eTBI9uBqKJB/view?usp=sharing"
+rf_model_path = "https://drive.google.com/file/d/1CB4eJYN4sQh-vxAneY9sZeWKyciHN9pv/view?usp=drive_link"
+xgb_model_path = "https://drive.google.com/file/d/1YDsOga5RcTItqiIxbi6E18THwqtEc_Kg/view?usp=sharing"
 
 # Load models
 cnn_model = load_model(cnn_model_path)
