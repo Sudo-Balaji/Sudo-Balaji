@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidney Disease Prediction</title>
+</head>
+<body>
+    <h1>Kidney Disease Prediction</h1>
+    
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <h3>Upload Kidney Image:</h3>
+        <input type="file" name="image" required>
+        
+        <h3>Enter Clinical Data:</h3>
+        <label for="age">Age:</label>
+        <input type="number" name="Age" required><br>
+        <label for="bmi">BMI:</label>
+        <input type="number" name="BMI" required><br>
+        <label for="family_history">Family History of Kidney Disease:</label>
+        <input type="number" name="FamilyHistoryKidneyDisease" required><br>
+        <label for="sbp">Systolic BP:</label>
+        <input type="number" name="SystolicBP" required><br>
+        <label for="creatinine">Serum Creatinine:</label>
+        <input type="number" name="SerumCreatinine" required><br>
+        <label for="gfr">GFR:</label>
+        <input type="number" name="GFR" required><br>
+        <label for="acr">ACR:</label>
+        <input type="number" name="ACR" required><br>
+
+        <h3>Select Models:</h3>
+        <label for="image_model">Image Model:</label>
+        <select name="image_model" required>
+            <option value="cnn">CNN</option>
+            <option value="resnet">ResNet</option>
+        </select><br>
+        <label for="clinical_model">Clinical Model:</label>
+        <select name="clinical_model" required>
+            <option value="rf">Random Forest</option>
+            <option value="xgb">XGBoost</option>
+        </select><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
